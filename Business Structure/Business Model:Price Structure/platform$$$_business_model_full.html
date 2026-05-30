@@ -1,0 +1,380 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.wrap{padding:1rem 0;font-size:13px;font-family:var(--font-sans)}
+.section-title{font-size:15px;font-weight:500;color:var(--color-text-primary);margin:0 0 10px}
+.section-sub{font-size:12px;color:var(--color-text-tertiary);margin:0 0 16px}
+.platform-block{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden;margin-bottom:20px}
+.platform-header{padding:12px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:0.5px solid var(--color-border-tertiary)}
+.platform-name{font-size:14px;font-weight:500;display:flex;align-items:center;gap:8px}
+.platform-name i{font-size:18px}
+.platform-body{padding:14px 16px}
+.flow-row{display:flex;align-items:stretch;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.flow-step{flex:1;min-width:100px;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:8px 10px}
+.flow-step.accent{border-color:var(--color-border-info);background:var(--color-background-info)}
+.flow-step.revenue{border-color:var(--color-border-success);background:var(--color-background-success)}
+.flow-label{font-size:10px;font-weight:500;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px}
+.flow-value{font-size:12px;color:var(--color-text-primary);line-height:1.45}
+.flow-arrow{display:flex;align-items:center;color:var(--color-text-tertiary);font-size:16px;flex-shrink:0;align-self:center}
+.price-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:14px}
+.price-card{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:8px 10px;cursor:pointer}
+.price-card:hover{border-color:var(--color-border-secondary)}
+.price-tag{font-size:18px;font-weight:500;color:var(--color-text-primary);margin-bottom:2px}
+.price-name{font-size:11px;color:var(--color-text-secondary);margin-bottom:4px}
+.price-note{font-size:10px;color:var(--color-text-tertiary);line-height:1.4}
+.price-badge{display:inline-block;font-size:9px;font-weight:500;padding:1px 6px;border-radius:8px;margin-top:4px}
+.badge-blue{background:var(--color-background-info);color:var(--color-text-info)}
+.badge-green{background:var(--color-background-success);color:var(--color-text-success)}
+.badge-amber{background:var(--color-background-warning);color:var(--color-text-warning)}
+.badge-red{background:var(--color-background-danger);color:var(--color-text-danger)}
+.divider{height:0.5px;background:var(--color-border-tertiary);margin:12px 0}
+.metric-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-bottom:14px}
+.metric{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px}
+.metric-val{font-size:20px;font-weight:500;color:var(--color-text-primary)}
+.metric-label{font-size:10px;color:var(--color-text-tertiary);margin-top:2px}
+.opt-block{border-radius:var(--border-radius-lg);padding:12px 14px;margin-bottom:8px;border:0.5px solid var(--color-border-tertiary)}
+.opt-row{display:flex;align-items:flex-start;gap:10px}
+.opt-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}
+.opt-text .opt-title{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:3px}
+.opt-text .opt-desc{font-size:12px;color:var(--color-text-secondary);line-height:1.5}
+.gap{background:var(--color-background-warning)}
+.gap .opt-icon{background:var(--color-background-warning);color:var(--color-text-warning)}
+.done{background:var(--color-background-success)}
+.done .opt-icon{background:var(--color-background-success);color:var(--color-text-success)}
+.improve{background:var(--color-background-info)}
+.improve .opt-icon{background:var(--color-background-info);color:var(--color-text-info)}
+.revenue-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:16px}
+.rev-card{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:12px 14px;background:var(--color-background-primary)}
+.rev-platform{font-size:11px;font-weight:500;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.rev-platform i{font-size:14px}
+.rev-low{font-size:22px;font-weight:500;color:var(--color-text-primary)}
+.rev-range{font-size:11px;color:var(--color-text-tertiary);margin-top:2px}
+.rev-note{font-size:11px;color:var(--color-text-secondary);margin-top:4px;padding-top:4px;border-top:0.5px solid var(--color-border-tertiary)}
+.total-banner{background:var(--color-background-secondary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-lg);padding:12px 16px;display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.total-banner i{font-size:22px;color:var(--color-text-info)}
+.total-text{flex:1}
+.total-text .total-num{font-size:22px;font-weight:500;color:var(--color-text-primary)}
+.total-text .total-sub{font-size:11px;color:var(--color-text-tertiary);margin-top:2px}
+.score-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.score-card{flex:1;min-width:130px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:10px 12px;background:var(--color-background-primary)}
+.score-platform{font-size:10px;font-weight:500;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px}
+.score-bar-wrap{height:6px;background:var(--color-background-secondary);border-radius:3px;margin-bottom:5px;overflow:hidden}
+.score-bar{height:100%;border-radius:3px}
+.score-metric{display:flex;justify-content:space-between;font-size:11px;color:var(--color-text-secondary);margin-bottom:4px}
+.bar-of{background:#00AFF0}
+.bar-ig{background:#C13584}
+.bar-pt{background:#FF424D}
+</style>
+
+<h2 class="sr-only">Full business model visual for three-platform creator strategy: OnlyFans workflow and pricing, Instagram funnel, Patreon tier model, revenue estimates, and optimisation audit</h2>
+
+<div class="wrap">
+
+<p class="section-title">Platform workflows and pricing</p>
+<p class="section-sub">How value flows through each platform — from discovery to revenue</p>
+
+<div class="platform-block">
+  <div class="platform-header">
+    <div class="platform-name" style="color:#00AFF0"><i class="ti ti-flame" aria-hidden="true"></i>OnlyFans — hybrid funnel model</div>
+    <span class="price-badge badge-blue">Primary revenue engine</span>
+  </div>
+  <div class="platform-body">
+    <div class="flow-row">
+      <div class="flow-step"><div class="flow-label">Entry</div><div class="flow-value">Free follow — zero friction. Bio, personality posts, teasers visible.</div></div>
+      <div class="flow-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></div>
+      <div class="flow-step"><div class="flow-label">Warm up</div><div class="flow-value">Free posts build parasocial relationship. Follower feels they know her.</div></div>
+      <div class="flow-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></div>
+      <div class="flow-step accent"><div class="flow-label">First spend</div><div class="flow-value">PPV $8 — lowest barrier. First unlock conditions the next.</div></div>
+      <div class="flow-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></div>
+      <div class="flow-step revenue"><div class="flow-label">Retention</div><div class="flow-value">VIP $12/mo — full drops, priority DMs, bundle discounts.</div></div>
+    </div>
+    <div class="divider"></div>
+    <div class="price-row">
+      <div class="price-card" onclick="sendPrompt('How should I price my first OnlyFans PPV to maximise first purchases? ↗')">
+        <div class="price-tag">$8</div>
+        <div class="price-name">First PPV (Jan)</div>
+        <div class="price-note">Lowest ever. Only goal is to break the first-purchase barrier.</div>
+        <span class="price-badge badge-blue">Entry price</span>
+      </div>
+      <div class="price-card" onclick="sendPrompt('When should I raise my PPV prices from $8 to $10? ↗')">
+        <div class="price-tag">$10</div>
+        <div class="price-name">PPV Feb–Apr</div>
+        <div class="price-note">Trust established. Second and third purchases. Increase barely noticed.</div>
+        <span class="price-badge badge-blue">Trust phase</span>
+      </div>
+      <div class="price-card">
+        <div class="price-tag">$12–13</div>
+        <div class="price-name">PPV May–Oct</div>
+        <div class="price-note">Summer peak and autumn. Higher production value justifies creep.</div>
+        <span class="price-badge badge-amber">Peak season</span>
+      </div>
+      <div class="price-card">
+        <div class="price-tag">$14–15</div>
+        <div class="price-name">PPV Nov–Dec</div>
+        <div class="price-note">Holiday premium. Most intimate indoor content. Year-end high.</div>
+        <span class="price-badge badge-amber">Premium tier</span>
+      </div>
+      <div class="price-card" onclick="sendPrompt('How do I structure a bundle offer on OnlyFans to maximise revenue? ↗')">
+        <div class="price-tag">$25–45</div>
+        <div class="price-name">Bundles</div>
+        <div class="price-note">Seasonal transitions. 3–5 sets bundled. Always framed as savings (save 30–40%).</div>
+        <span class="price-badge badge-green">High value</span>
+      </div>
+      <div class="price-card" onclick="sendPrompt('What should I include in my OnlyFans VIP page to justify $12/month? ↗')">
+        <div class="price-tag">$12/mo</div>
+        <div class="price-name">VIP page</div>
+        <div class="price-note">Introduced Week 2. Full drops + priority DMs + bundle discounts.</div>
+        <span class="price-badge badge-green">Recurring</span>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="metric-row">
+      <div class="metric"><div class="metric-val">20%</div><div class="metric-label">Platform cut (you keep 80%)</div></div>
+      <div class="metric"><div class="metric-val">2–3×</div><div class="metric-label">PPV drops per month</div></div>
+      <div class="metric"><div class="metric-val">4–5×</div><div class="metric-label">Free posts per week</div></div>
+      <div class="metric"><div class="metric-val">$8→$15</div><div class="metric-label">Price ladder Jan–Dec</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="platform-block">
+  <div class="platform-header">
+    <div class="platform-name" style="color:#C13584"><i class="ti ti-brand-instagram" aria-hidden="true"></i>Instagram — traffic funnel only</div>
+    <span class="price-badge badge-red">No direct revenue</span>
+  </div>
+  <div class="platform-body">
+    <div class="flow-row">
+      <div class="flow-step"><div class="flow-label">Awareness</div><div class="flow-value">Reels and feed posts reach new audiences outside existing followers.</div></div>
+      <div class="flow-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></div>
+      <div class="flow-step"><div class="flow-label">Interest</div><div class="flow-value">Editorial quality builds desire. Never shows premium content. Always leaves something unseen.</div></div>
+      <div class="flow-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></div>
+      <div class="flow-step accent"><div class="flow-label">Click</div><div class="flow-value">Bio link (Linktree) routes to OF free page. This is the only conversion goal of IG.</div></div>
+      <div class="flow-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></div>
+      <div class="flow-step revenue"><div class="flow-label">Conversion</div><div class="flow-value">OF free follow → warm up → PPV / VIP. Instagram does not monetise directly.</div></div>
+    </div>
+    <div class="divider"></div>
+    <div class="price-row">
+      <div class="price-card">
+        <div class="price-tag">4–5×</div>
+        <div class="price-name">Feed posts / week</div>
+        <div class="price-note">Editorial portraits, lifestyle, tasteful teasers. Never full shoot content.</div>
+        <span class="price-badge badge-blue">Always free</span>
+      </div>
+      <div class="price-card">
+        <div class="price-tag">2–3×</div>
+        <div class="price-name">Reels / week</div>
+        <div class="price-note">GRWM, day-in-life, aesthetic edits. Highest reach format on IG.</div>
+        <span class="price-badge badge-blue">Traffic driver</span>
+      </div>
+      <div class="price-card">
+        <div class="price-tag">Daily</div>
+        <div class="price-name">Stories</div>
+        <div class="price-note">Polls, BTS, real moments. Keeps profile warm between feed posts.</div>
+        <span class="price-badge badge-blue">Engagement</span>
+      </div>
+      <div class="price-card">
+        <div class="price-tag">1×</div>
+        <div class="price-name">Bio link</div>
+        <div class="price-note">Linktree pointing to OF free page. Every caption ends with "link in bio."</div>
+        <span class="price-badge badge-amber">Conversion point</span>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="metric-row">
+      <div class="metric"><div class="metric-val">$0</div><div class="metric-label">Direct revenue from IG</div></div>
+      <div class="metric"><div class="metric-val">100%</div><div class="metric-label">Goal: OF free page follows</div></div>
+      <div class="metric"><div class="metric-val">0</div><div class="metric-label">Premium content ever posted</div></div>
+      <div class="metric"><div class="metric-val">Always</div><div class="metric-label">Teaser only, never the full set</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="platform-block">
+  <div class="platform-header">
+    <div class="platform-name" style="color:#FF424D"><i class="ti ti-users" aria-hidden="true"></i>Patreon — loyalty and stable income</div>
+    <span class="price-badge badge-green">Recurring revenue</span>
+  </div>
+  <div class="platform-body">
+    <div class="flow-row">
+      <div class="flow-step"><div class="flow-label">Entry</div><div class="flow-value">$5/month — BTS, personal updates, polls, early access. Low barrier.</div></div>
+      <div class="flow-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></div>
+      <div class="flow-step accent"><div class="flow-label">Mid tier</div><div class="flow-value">$10/month — exclusive shoot extensions. Content not posted anywhere else.</div></div>
+      <div class="flow-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></div>
+      <div class="flow-step revenue"><div class="flow-label">Upgrade trigger</div><div class="flow-value">$5 member sees "$10 only" label on exclusive posts. Natural upsell.</div></div>
+    </div>
+    <div class="divider"></div>
+    <div class="price-row">
+      <div class="price-card" onclick="sendPrompt('What content keeps $5 Patreon subscribers from churning? ↗')">
+        <div class="price-tag">$5/mo</div>
+        <div class="price-name">Insider tier</div>
+        <div class="price-note">BTS dumps, monthly update, polls, early access to shoot teaser. ~4 posts/month.</div>
+        <span class="price-badge badge-blue">Loyalty tier</span>
+      </div>
+      <div class="price-card" onclick="sendPrompt('How do I make my $10 Patreon tier feel worth it every month? ↗')">
+        <div class="price-tag">$10/mo</div>
+        <div class="price-name">Premium tier</div>
+        <div class="price-note">Exclusive shoot pics not in any OF PPV. ~2 posts/month. Strongest differentiator.</div>
+        <span class="price-badge badge-amber">Premium tier</span>
+      </div>
+      <div class="price-card">
+        <div class="price-tag">5–12%</div>
+        <div class="price-name">Platform cut</div>
+        <div class="price-note">Lower than OF (20%). Patreon keeps less but income is less per fan.</div>
+        <span class="price-badge badge-green">Better margin %</span>
+      </div>
+      <div class="price-card">
+        <div class="price-tag">4×/mo</div>
+        <div class="price-name">Post cadence</div>
+        <div class="price-note">Monthly letter, BTS dump, exclusive preview, one poll or Q&amp;A extension.</div>
+        <span class="price-badge badge-blue">Predictable</span>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="metric-row">
+      <div class="metric"><div class="metric-val">5–12%</div><div class="metric-label">Platform cut (best margin)</div></div>
+      <div class="metric"><div class="metric-val">4×</div><div class="metric-label">Posts per month minimum</div></div>
+      <div class="metric"><div class="metric-val">$5–10</div><div class="metric-label">Monthly recurring per member</div></div>
+      <div class="metric"><div class="metric-val">Low</div><div class="metric-label">Churn when done correctly</div></div>
+    </div>
+  </div>
+</div>
+
+<p class="section-title">Year-end revenue model</p>
+<p class="section-sub">Conservative estimates based on modest subscriber growth and average conversion rates</p>
+
+<div class="revenue-summary">
+  <div class="rev-card">
+    <div class="rev-platform"><i class="ti ti-flame" style="color:#00AFF0" aria-hidden="true"></i>OnlyFans</div>
+    <div class="rev-low">$3,200–$5,400</div>
+    <div class="rev-range">estimated annual at 80% payout</div>
+    <div class="rev-note">PPV + bundles + VIP subscriptions combined. Grows monthly as audience builds.</div>
+  </div>
+  <div class="rev-card">
+    <div class="rev-platform"><i class="ti ti-brand-instagram" style="color:#C13584" aria-hidden="true"></i>Instagram</div>
+    <div class="rev-low">$0 direct</div>
+    <div class="rev-range">revenue is indirect via OF follows</div>
+    <div class="rev-note">Value is audience pipeline. Every 100 IG followers → estimated 8–15 OF follows.</div>
+  </div>
+  <div class="rev-card">
+    <div class="rev-platform"><i class="ti ti-users" style="color:#FF424D" aria-hidden="true"></i>Patreon</div>
+    <div class="rev-low">$600–$1,200</div>
+    <div class="rev-range">estimated annual at 90% payout</div>
+    <div class="rev-note">Stable recurring base. Lower ceiling but predictable. Grows with OF audience.</div>
+  </div>
+  <div class="rev-card" style="border-color:var(--color-border-info)">
+    <div class="rev-platform"><i class="ti ti-chart-bar" style="color:var(--color-text-info)" aria-hidden="true"></i>Combined</div>
+    <div class="rev-low" style="color:var(--color-text-info)">$3,800–$6,600</div>
+    <div class="rev-range">year 1 conservative estimate</div>
+    <div class="rev-note">Scales significantly in year 2 as audience compounds. December bundles are the biggest single revenue event.</div>
+  </div>
+</div>
+
+<div class="total-banner">
+  <i class="ti ti-trending-up" aria-hidden="true"></i>
+  <div class="total-text">
+    <div class="total-num">$6,600 – $12,000+ year 2 projection</div>
+    <div class="total-sub">Once audience is established and price ladder is fully climbed — same content, compounding returns</div>
+  </div>
+  <button onclick="sendPrompt('How do I grow my OnlyFans audience faster to hit the year 2 revenue target? ↗')">Scale plan ↗</button>
+</div>
+
+<p class="section-title">Optimisation audit — what is and is not yet optimised</p>
+<p class="section-sub">Honest assessment of the current business model gaps</p>
+
+<div class="opt-block done">
+  <div class="opt-row">
+    <div class="opt-icon"><i class="ti ti-check" aria-hidden="true"></i></div>
+    <div class="opt-text">
+      <div class="opt-title">Price ladder is well structured</div>
+      <div class="opt-desc">$8 entry in January climbing to $15 in December is correctly calibrated. Low enough to break the first-purchase barrier, high enough at peak to reflect quality and trust. This is optimised.</div>
+    </div>
+  </div>
+</div>
+
+<div class="opt-block done">
+  <div class="opt-row">
+    <div class="opt-icon"><i class="ti ti-check" aria-hidden="true"></i></div>
+    <div class="opt-text">
+      <div class="opt-title">Platform roles are clearly separated</div>
+      <div class="opt-desc">Instagram drives traffic. OnlyFans monetises. Patreon retains. No platform is trying to do someone else's job. This separation reduces confusion and maximises each platform's native strengths.</div>
+    </div>
+  </div>
+</div>
+
+<div class="opt-block done">
+  <div class="opt-row">
+    <div class="opt-icon"><i class="ti ti-check" aria-hidden="true"></i></div>
+    <div class="opt-text">
+      <div class="opt-title">Psychology funnel is correctly sequenced</div>
+      <div class="opt-desc">Parasocial relationship before any sell. First PPV after two weeks of trust-building. VIP introduced only after the first PPV is proven. Bundle offered only in established months. Sequence is correct.</div>
+    </div>
+  </div>
+</div>
+
+<div class="opt-block improve">
+  <div class="opt-row">
+    <div class="opt-icon"><i class="ti ti-arrow-up" aria-hidden="true"></i></div>
+    <div class="opt-text">
+      <div class="opt-title">Custom content pricing not yet defined</div>
+      <div class="opt-desc">DMs are open and custom requests are mentioned, but there is no defined pricing structure for custom content. This is one of the highest revenue-per-fan mechanisms on OnlyFans. Needs a clear menu: custom photo $20–$40, custom video $50–$100, based on length and specificity.</div>
+    </div>
+  </div>
+</div>
+
+<div class="opt-block improve">
+  <div class="opt-row">
+    <div class="opt-icon"><i class="ti ti-arrow-up" aria-hidden="true"></i></div>
+    <div class="opt-text">
+      <div class="opt-title">Mass DM strategy is mentioned but not scripted</div>
+      <div class="opt-desc">Mass DMs on PPV drop days are flagged in the calendar but the actual message templates are not written. A well-timed mass DM with the right opener ("I shot something today and I want you to see it first") can double PPV unlock rate on drop day. Needs scripting.</div>
+    </div>
+  </div>
+</div>
+
+<div class="opt-block improve">
+  <div class="opt-row">
+    <div class="opt-icon"><i class="ti ti-arrow-up" aria-hidden="true"></i></div>
+    <div class="opt-text">
+      <div class="opt-title">Patreon $25 tier is absent — revenue gap</div>
+      <div class="opt-desc">The calendar has $5 and $10 tiers but no $25 tier. A $25 tier offering personalised interaction, private polls, and priority custom requests is a proven Patreon retention and revenue tool. Missing this tier leaves money on the table from the highest-value fans.</div>
+    </div>
+  </div>
+</div>
+
+<div class="opt-block gap">
+  <div class="opt-row">
+    <div class="opt-icon"><i class="ti ti-alert-triangle" aria-hidden="true"></i></div>
+    <div class="opt-text">
+      <div class="opt-title">No tip jar strategy or tip triggers on free posts</div>
+      <div class="opt-desc">Free posts have a Tip button but the calendar does not include any tip-triggering captions. A simple line at the end of high-performing free posts ("if this made your day, tip jar is open below") can generate significant supplemental income from warm followers who are not yet buying PPV.</div>
+    </div>
+  </div>
+</div>
+
+<div class="opt-block gap">
+  <div class="opt-row">
+    <div class="opt-icon"><i class="ti ti-alert-triangle" aria-hidden="true"></i></div>
+    <div class="opt-text">
+      <div class="opt-title">No re-engagement strategy for lapsed followers</div>
+      <div class="opt-desc">Once someone unfollows or stops engaging, there is currently no re-entry mechanism. A quarterly "welcome back" discounted PPV bundle targeted via Instagram Reels (which surface to non-followers) is a standard recovery tactic. Not in the plan yet.</div>
+    </div>
+  </div>
+</div>
+
+<div class="opt-block gap">
+  <div class="opt-row">
+    <div class="opt-icon"><i class="ti ti-alert-triangle" aria-hidden="true"></i></div>
+    <div class="opt-text">
+      <div class="opt-title">Instagram conversion rate is untracked</div>
+      <div class="opt-desc">The plan uses IG as a traffic source but has no defined way to measure how many IG visitors become OF followers. Without tracking this, it is impossible to know if the content strategy is working or which post types drive the most OF follows. Need a UTM link or at minimum a weekly follower count log.</div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top:6px;padding-top:14px;border-top:0.5px solid var(--color-border-tertiary);display:flex;gap:8px;flex-wrap:wrap">
+  <button onclick="sendPrompt('Build me a custom content pricing menu for OnlyFans DMs ↗')">Custom content pricing ↗</button>
+  <button onclick="sendPrompt('Write me 3 mass DM templates for PPV drop days ↗')">Mass DM templates ↗</button>
+  <button onclick="sendPrompt('Design a $25 Patreon tier with the right content to justify it ↗')">$25 Patreon tier ↗</button>
+  <button onclick="sendPrompt('Write tip-triggering captions for OnlyFans free posts ↗')">Tip triggers ↗</button>
+</div>
+
+</div>

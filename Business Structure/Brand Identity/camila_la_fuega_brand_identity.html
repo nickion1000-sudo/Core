@@ -1,0 +1,250 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+body{font-family:var(--font-sans)}
+.wrap{padding:1.5rem 0}
+.name-block{text-align:center;padding:2rem 0 1.5rem;border-bottom:0.5px solid var(--color-border-tertiary);margin-bottom:2rem}
+.name-logotype{font-family:var(--font-serif);font-size:38px;font-weight:400;letter-spacing:0.14em;color:var(--color-text-primary);text-transform:uppercase;display:block;margin-bottom:4px}
+.name-handle{font-size:13px;letter-spacing:0.14em;color:var(--color-text-tertiary);margin-bottom:8px;font-weight:400}
+.name-tagline{font-size:11px;letter-spacing:0.22em;color:var(--color-text-tertiary);text-transform:uppercase;font-weight:400}
+.name-sub{font-size:12px;color:var(--color-text-tertiary);margin-top:8px;font-style:italic;font-family:var(--font-serif)}
+.section-label{font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-text-tertiary);margin-bottom:12px}
+.divider{height:0.5px;background:var(--color-border-tertiary);margin:1.5rem 0}
+
+.palette-row{display:flex;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.swatch-group{flex:1;min-width:80px}
+.swatch{height:56px;border-radius:var(--border-radius-md);margin-bottom:4px;border:0.5px solid var(--color-border-tertiary)}
+.swatch-name{font-size:11px;color:var(--color-text-secondary);margin-bottom:1px;font-weight:500}
+.swatch-hex{font-size:10px;color:var(--color-text-tertiary);font-family:var(--font-mono)}
+.swatch-role{font-size:10px;color:var(--color-text-tertiary);font-style:italic}
+
+.change-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.5rem}
+.change-card{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:12px 14px;background:var(--color-background-primary)}
+.change-label{font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.change-label i{font-size:13px}
+.change-label.updated{color:var(--color-text-success)}
+.change-label.same{color:var(--color-text-tertiary)}
+.change-item{font-size:12px;color:var(--color-text-secondary);line-height:1.7}
+.change-item strong{color:var(--color-text-primary);font-weight:500}
+
+.bio-block{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:16px;margin-bottom:10px;background:var(--color-background-primary)}
+.bio-platform{font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-text-tertiary);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.bio-platform i{font-size:14px}
+.bio-text{font-size:13px;color:var(--color-text-primary);line-height:1.75;font-family:var(--font-serif)}
+.bio-char{font-size:10px;color:var(--color-text-tertiary);margin-top:6px}
+
+.phrase-grid{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.5rem}
+.phrase-pill{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:20px;padding:6px 14px;font-size:12px;color:var(--color-text-secondary);font-style:italic}
+
+.mood-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:1.5rem}
+.mood-card{border-radius:var(--border-radius-lg);padding:14px;border:0.5px solid var(--color-border-tertiary);background:var(--color-background-primary)}
+.mood-name{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-tertiary);margin-bottom:6px}
+.mood-desc{font-size:12px;color:var(--color-text-secondary);line-height:1.55}
+.mood-eg{font-size:11px;color:var(--color-text-tertiary);margin-top:6px;font-style:italic}
+
+.handles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-bottom:1.5rem}
+.handle-card{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:10px 12px;background:var(--color-background-primary)}
+.handle-platform{font-size:10px;color:var(--color-text-tertiary);margin-bottom:4px;display:flex;align-items:center;gap:5px}
+.handle-platform i{font-size:13px}
+.handle-name{font-size:12px;font-weight:500;color:var(--color-text-primary)}
+.handle-status{font-size:10px;margin-top:3px}
+.status-secured{color:var(--color-text-success)}
+.status-todo{color:var(--color-text-warning)}
+
+.truth-block{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:16px;background:var(--color-background-primary);margin-bottom:1.5rem}
+</style>
+
+<h2 class="sr-only">Updated brand identity system for Camila La Fuega — name, handles, palette adjustments, updated bios, and what changed versus what stays the same</h2>
+
+<div class="wrap">
+
+<div class="name-block">
+  <span class="name-logotype">Camila La Fuega</span>
+  <div class="name-handle">@camilalaafuega</div>
+  <div class="name-tagline">soft doesn't mean available</div>
+  <div class="name-sub">"that version of me doesn't live here anymore"</div>
+</div>
+
+<div class="section-label">What changes</div>
+<div class="change-row">
+  <div class="change-card">
+    <div class="change-label updated"><i class="ti ti-refresh" aria-hidden="true"></i>Updated</div>
+    <div class="change-item">
+      <strong>Name:</strong> Camila La Fuega<br>
+      <strong>Handle:</strong> @camilalaafuega (secured on IG)<br>
+      <strong>Cultural register:</strong> Latin — warm, sensual, fire-adjacent<br>
+      <strong>Palette accent:</strong> deeper terracotta and burnt sienna added alongside existing warm gold<br>
+      <strong>Bios:</strong> rewritten with her name and Latin warmth in the voice<br>
+      <strong>Tagline variants:</strong> expanded — "la fuega" language woven in naturally<br>
+      <strong>Handle on all other platforms:</strong> claim @camilalaafuega everywhere
+    </div>
+  </div>
+  <div class="change-card">
+    <div class="change-label same"><i class="ti ti-check" aria-hidden="true"></i>Unchanged</div>
+    <div class="change-item">
+      <strong>The psychology:</strong> every trigger, every funnel, every mechanism<br>
+      <strong>The backstory:</strong> the woman is the same — only her name shifts<br>
+      <strong>Visual aesthetic:</strong> images, palette core, edit style<br>
+      <strong>Platform strategy:</strong> IG → Linktree → OF + Patreon<br>
+      <strong>Pricing structure:</strong> $8 → $15 ladder, VIP at $12/mo<br>
+      <strong>Content calendar:</strong> 365 days unchanged<br>
+      <strong>Voice and communication style:</strong> lowercase, comma-splice, restrained
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section-label">Updated colour palette — now with Latin heat</div>
+<div class="palette-row">
+  <div class="swatch-group">
+    <div class="swatch" style="background:#1A1714"></div>
+    <div class="swatch-name">Obsidian</div>
+    <div class="swatch-hex">#1A1714</div>
+    <div class="swatch-role">Primary black — unchanged</div>
+  </div>
+  <div class="swatch-group">
+    <div class="swatch" style="background:#C8A97E"></div>
+    <div class="swatch-name">Warm gold</div>
+    <div class="swatch-hex">#C8A97E</div>
+    <div class="swatch-role">Coin necklace — unchanged</div>
+  </div>
+  <div class="swatch-group">
+    <div class="swatch" style="background:#B5441A"></div>
+    <div class="swatch-name">La fuega</div>
+    <div class="swatch-hex">#B5441A</div>
+    <div class="swatch-role">New accent — fire, terracotta, Latin warmth</div>
+  </div>
+  <div class="swatch-group">
+    <div class="swatch" style="background:#E8E0D4"></div>
+    <div class="swatch-name">Linen</div>
+    <div class="swatch-hex">#E8E0D4</div>
+    <div class="swatch-role">Background — unchanged</div>
+  </div>
+  <div class="swatch-group">
+    <div class="swatch" style="background:#5A4A3F"></div>
+    <div class="swatch-name">Mahogany</div>
+    <div class="swatch-hex">#5A4A3F</div>
+    <div class="swatch-role">Mid-tone — unchanged</div>
+  </div>
+  <div class="swatch-group">
+    <div class="swatch" style="background:#2B2421"></div>
+    <div class="swatch-name">Espresso</div>
+    <div class="swatch-hex">#2B2421</div>
+    <div class="swatch-role">Deep dark — unchanged</div>
+  </div>
+</div>
+<div style="font-size:11px;color:var(--color-text-tertiary);margin-bottom:1.5rem;padding:8px 12px;background:var(--color-background-secondary);border-radius:var(--border-radius-md)">The terracotta "La Fuega" colour is used sparingly — on the Linktree, as a text accent in branded graphics, and in the occasional wardrobe piece (terracotta or burnt orange). It is never the dominant colour. It is the ember, not the flame.</div>
+
+<div class="divider"></div>
+
+<div class="section-label">Handle status — secure these now</div>
+<div class="handles-grid">
+  <div class="handle-card">
+    <div class="handle-platform"><i class="ti ti-brand-instagram" aria-hidden="true"></i>Instagram</div>
+    <div class="handle-name">@camilalaafuega</div>
+    <div class="handle-status status-secured">Secured</div>
+  </div>
+  <div class="handle-card">
+    <div class="handle-platform"><i class="ti ti-brand-tiktok" aria-hidden="true"></i>TikTok</div>
+    <div class="handle-name">@camilalaafuega</div>
+    <div class="handle-status status-todo">Claim today</div>
+  </div>
+  <div class="handle-card">
+    <div class="handle-platform"><i class="ti ti-brand-x" aria-hidden="true"></i>X / Twitter</div>
+    <div class="handle-name">@camilalaafuega</div>
+    <div class="handle-status status-todo">Claim today</div>
+  </div>
+  <div class="handle-card">
+    <div class="handle-platform"><i class="ti ti-flame" aria-hidden="true"></i>OnlyFans</div>
+    <div class="handle-name">@camilalaafuega</div>
+    <div class="handle-status status-todo">Register + verify</div>
+  </div>
+  <div class="handle-card">
+    <div class="handle-platform"><i class="ti ti-users" aria-hidden="true"></i>Patreon</div>
+    <div class="handle-name">@camilalaafuega</div>
+    <div class="handle-status status-todo">Set up in draft</div>
+  </div>
+  <div class="handle-card">
+    <div class="handle-platform"><i class="ti ti-brand-reddit" aria-hidden="true"></i>Reddit</div>
+    <div class="handle-name">u/camilalaafuega</div>
+    <div class="handle-status status-todo">Claim today</div>
+  </div>
+  <div class="handle-card">
+    <div class="handle-platform"><i class="ti ti-link" aria-hidden="true"></i>Linktree</div>
+    <div class="handle-name">linktr.ee/camilalaafuega</div>
+    <div class="handle-status status-todo">Set up next</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section-label">Updated platform bios</div>
+
+<div class="bio-block">
+  <div class="bio-platform"><i class="ti ti-brand-instagram" aria-hidden="true"></i>Instagram bio</div>
+  <div class="bio-text">photographer. creative. somewhere between soft and fire.<br>gold jewelry and bad decisions 🖤<br>soft doesn't mean available<br>↓ linktr.ee/camilalaafuega</div>
+  <div class="bio-char">~120 chars — fits IG bio. "Between soft and fire" is her Latin duality in one line.</div>
+</div>
+
+<div class="bio-block">
+  <div class="bio-platform"><i class="ti ti-flame" aria-hidden="true"></i>OnlyFans — free page bio</div>
+  <div class="bio-text">camila. photographer. lives alone with a black cat, too many candles, and music you've never heard of.<br><br>this is where i share what doesn't go anywhere else.<br>follow is free. the rest, you earn.<br><br>🖤 new drops weekly · DMs open</div>
+  <div class="bio-char">Her name is now Camila throughout. "The rest, you earn" — speaks to the psychology of desire through incompleteness.</div>
+</div>
+
+<div class="bio-block">
+  <div class="bio-platform"><i class="ti ti-users" aria-hidden="true"></i>Patreon page description</div>
+  <div class="bio-text">i'm camila.<br><br>i grew up learning how to read a room before i learned how to speak in one. i've been quiet in places where i should have been loud, and loud in rooms that didn't deserve it. i'm done with both.<br><br>this page is what happens when i stop editing myself for other people.<br><br>the $5 tier is where you start. the rest is for the ones who stay.</div>
+  <div class="bio-char">Pulls directly from Camila's backstory — emotionally intelligent, slightly guarded, deeply personal. The reader feels they are meeting the real her.</div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section-label">Updated visual register — Latin fire woven in without stereotype</div>
+<div class="mood-row">
+  <div class="mood-card">
+    <div class="mood-name">Composed luxury</div>
+    <div class="mood-desc">Still the G-Wagon energy. Now with a terracotta or burnt orange accent piece allowed occasionally. The fire is implied, never performed.</div>
+    <div class="mood-eg">A rust-coloured silk slip under a black leather jacket. One piece. Subtle.</div>
+  </div>
+  <div class="mood-card">
+    <div class="mood-name">Warm intimate</div>
+    <div class="mood-desc">The grey ribbed henley stays. But now a candle in terracotta tones, white tulips in a dark vase, warm kitchen light at night — the Latin home register.</div>
+    <div class="mood-eg">"the kitchen smells like something i made from memory, not a recipe"</div>
+  </div>
+  <div class="mood-card">
+    <div class="mood-name">The fuega moments</div>
+    <div class="mood-desc">Rare. High contrast. Black against warm skin in strong directional light. Sunglasses. Confidence without trying. These posts need no caption. Maybe one word.</div>
+    <div class="mood-eg">"fuega." — full stop. nothing else.</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section-label">Updated recurring phrases — her name woven in</div>
+<div class="phrase-grid">
+  <div class="phrase-pill">"soft doesn't mean available"</div>
+  <div class="phrase-pill">"fuega."</div>
+  <div class="phrase-pill">"la fuega no se apaga" — the fire doesn't go out</div>
+  <div class="phrase-pill">"that version of me doesn't live here anymore"</div>
+  <div class="phrase-pill">"i needed the quiet today"</div>
+  <div class="phrase-pill">"some days feel heavier than they look"</div>
+  <div class="phrase-pill">"not everything needs to be explained"</div>
+  <div class="phrase-pill">"me buying candles instead of emotional stability again"</div>
+  <div class="phrase-pill">"the rain made everything slower"</div>
+  <div class="phrase-pill">"i'm okay, just quiet"</div>
+</div>
+
+<div class="truth-block">
+  <div class="section-label" style="margin-bottom:8px">The one-sentence brand truth — updated</div>
+  <div style="font-size:16px;font-family:var(--font-serif);color:var(--color-text-primary);line-height:1.7">Camila La Fuega is what happens when a woman who was taught to stay quiet finally decides the fire was never something she needed to hide.</div>
+</div>
+
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+  <button onclick="sendPrompt('Write 10 Instagram captions in Camila La Fuega voice — lowercase, comma-splice, Latin warmth without stereotype ↗')">Write captions in her voice ↗</button>
+  <button onclick="sendPrompt('Design the Linktree page for Camila La Fuega with updated branding ↗')">Design her Linktree ↗</button>
+  <button onclick="sendPrompt('Build the first week shot list for Camila La Fuega using her updated brand identity ↗')">First week shot list ↗</button>
+</div>
+
+</div>
