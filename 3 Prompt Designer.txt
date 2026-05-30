@@ -1,0 +1,109 @@
+# IMAGE 1 — Primary Indoor Lifestyle Pose
+
+Run ECHO:
+
+Scene:
+standing casually in front of a full-length mirror during a cloudy May afternoon while taking a relaxed mirror selfie at home.
+
+Environment:
+cozy lived-in apartment bedroom with soft overcast daylight, slightly unmade bed, subtle everyday clutter, neutral warm tones, realistic middle-class apartment atmosphere.
+
+Wardrobe:
+oversized light gray hoodie draping naturally over Alessia’s approved curvy frame, white long socks, minimal gold jewelry, dark curly hair loosely tied up with soft imperfect frizz and face-framing strands.
+
+Body lock:
+preserve Alessia’s canonical body proportions with fuller thighs, rounded hips, natural feminine softness, realistic waist thickness, grounded lower-body density, no fashion-model slimming.
+
+Activity:
+holding phone naturally at chest height while leaning slightly into one hip with relaxed shoulders.
+
+Camera:
+mirror selfie iPhone realism, Instagram-native 4:5 portrait orientation, believable front-camera softness, slightly imperfect crop, casual camera-roll energy.
+
+Lighting:
+soft cloudy daylight through blinds with realistic smartphone exposure limitations, mild shadow flattening, slight highlight dullness, no cinematic glow.
+
+Details:
+slightly wrinkled hoodie around hips and thighs, realistic mirror dust/smudges, subtle room clutter, natural skin texture, realistic posture imbalance, believable apartment imperfections.
+
+Purpose:
+a believable attractive at-home mirror selfie that feels casually uploaded to Instagram.
+
+Negative control:
+avoid oily skin, avoid painterly rendering, avoid cinematic lighting, avoid perfect composition, avoid influencer perfection, avoid thin legs, avoid flattened hips, avoid luxury apartment staging.
+
+---
+
+# IMAGE 2 — Relaxed Floor Pose
+
+Run ECHO:
+
+Scene:
+sitting on the bedroom floor beside the mirror after taking a few photos while relaxing during the overcast afternoon.
+
+Environment:
+same cozy apartment bedroom with soft cloudy daylight, realistic home atmosphere, mild clothing clutter near bed, believable lived-in environment.
+
+Wardrobe:
+same oversized gray hoodie, same white long socks, same jewelry and hairstyle.
+
+Body lock:
+maintain Alessia’s approved curvier lower-body proportions with thicker thighs, fuller hips, realistic softness in legs and waist, grounded feminine balance.
+
+Activity:
+resting one knee upward while loosely holding phone near lap and glancing toward the mirror with a relaxed expression.
+
+Camera:
+friend-taken or timer-photo iPhone realism, slightly tilted framing, casual social-media energy, imperfect crop, believable smartphone softness.
+
+Lighting:
+soft overcast daylight with realistic phone-camera exposure inconsistency, mild shadow flattening, natural indoor softness.
+
+Details:
+hoodie bunching naturally around thighs and hips, realistic seated compression, slight under-eye realism, natural skin texture, believable apartment clutter and floor texture.
+
+Purpose:
+a softer emotionally grounded image that feels naturally captured at home.
+
+Negative control:
+avoid editorial posing, avoid dramatic shadows, avoid cinematic rendering, avoid slim body proportions, avoid glossy skin, avoid over-clean environment.
+
+---
+
+# IMAGE 3 — Reverse-Camera Selfie
+
+Run ECHO:
+
+Scene:
+quick reverse-camera selfie while sitting on the edge of the bed during the cloudy May afternoon.
+
+Environment:
+same apartment bedroom with soft overcast daylight filtering through windows, subtle room depth, realistic cozy atmosphere with mild clutter.
+
+Wardrobe:
+same oversized hoodie, same white socks, same jewelry and hairstyle.
+
+Body lock:
+preserve Alessia’s exact approved curvy proportions with fuller thighs, rounded hips, realistic feminine softness, natural weight distribution, no selfie-induced slimming distortion.
+
+Identity lock:
+preserve exact Alessia facial geometry including almond-shaped eyes, softly tapered jawline, cheekbone structure, nose bridge, lip shape, and natural curl pattern.
+
+Activity:
+holding phone casually for a quick selfie while giving a soft relaxed smile after lounging at home.
+
+Camera:
+reverse-camera iPhone realism, believable front-camera softness, slight exposure inconsistency, natural arm awkwardness, Instagram-native portrait orientation.
+
+Lighting:
+soft cloudy daylight with realistic smartphone limitations, flatter tones, mild highlight dullness, imperfect indoor exposure behavior.
+
+Details:
+partial phone edge visible, natural facial asymmetry, realistic curl frizz, slight room messiness, realistic mirror distortion nearby, natural skin texture without oily glow.
+
+Purpose:
+the realism anchor image that makes the carousel feel personal, modern, and genuinely Instagram-native.
+
+Negative control:
+avoid beauty-commercial glow, avoid cinematic rendering, avoid over-sharpening, avoid globally balanced tones, avoid thin legs, avoid unrealistic waist slimming, avoid facial identity drift.
+
